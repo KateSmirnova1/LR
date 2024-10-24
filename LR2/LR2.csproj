@@ -45,6 +45,10 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ЗаписьПродаж.cs" />
+    <Compile Include="ИсторияПродаж.cs" />
+    <Compile Include="ОписаниеТоваров.cs" />
+    <Compile Include="СпортТовары.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
