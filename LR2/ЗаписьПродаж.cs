@@ -8,16 +8,17 @@ namespace LR2
 {
     public struct ЗаписьПродаж
     {
-         public int количество;
-         public string НазваниеТовара;
-         public int День; 
-        
-        
-      
+        public int количество;
+        public int День;
+        public ОписаниеТоваров ОписаниеТоваров;
+
+
+        public ЗаписьПродаж(ОписаниеТоваров Т, int День_, int количество_)
+        {
+            ОписаниеТоваров = Т;           
+            День = День_;
+            количество = количество_;
+        }
+
     }
-    /*public void ДобавитьПродажу (int quantity, int day,string name) 
-    {
-        ЗаписьПродаж продаж = new ЗаписьПродаж { количество = quantity, День = day, НазваниеТовара = name };
-    
-    }*/
 }

@@ -7,9 +7,22 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-    internal class ИсторияПродаж
+    public class ИсторияПродаж
     {
-        Dictionary<СпортТовары, List<ЗаписьПродаж>> СловарьПродаж = new Dictionary<СпортТовары, List<ЗаписьПродаж>>();
+        List<ОписаниеТоваров> Запись = new List<ОписаниеТоваров>();
+
+        public void НоваяЗапись (ОписаниеТоваров x) 
+        {
+            Запись.Add(x);
+        }
+        public string ConvertString() 
+        {
+            for (int i = 0; i <=Запись.Count; i++) 
+            {
+
+            }
+            return;
+        }
         
     }
 }
