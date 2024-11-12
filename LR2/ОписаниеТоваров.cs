@@ -20,7 +20,10 @@ namespace LR2
             return Название;
             
         }
-         
+         public double СкажиЦену() 
+        {
+            return Цена;
+        }
         
          
 
