@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-    internal class ОписаниеТоваров
+    public class ОписаниеТоваров
     {
         private string Название;
         private double Цена;
