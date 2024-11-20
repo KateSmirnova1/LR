@@ -15,13 +15,20 @@ namespace LR2
         {
             Запись.Add(x);
         }
-        public string ConvertString() 
+        public string ConvertString()
+            
         {
-            for (int i = 0; i <=Запись.Count; i++) 
+            string res = " ";
+            for (int i = 0; i < Запись.Count; i++) 
             {
+                ЗаписьПродаж s = Запись[i];
+                res += Convert.ToString(s.День);
+                res += Convert.ToString(s.количество);
+                res += s.ОписаниеТоваров. СкажиНазвание();
+
 
             }
-            return;
+            return res;
         }
         
     }
