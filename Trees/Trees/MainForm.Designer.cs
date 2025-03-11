@@ -1,6 +1,6 @@
 ﻿namespace Trees
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,37 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.MyTreeView = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // treeView1
+            // MyTreeView
             // 
-            this.treeView1.Location = new System.Drawing.Point(12, 37);
-            this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(182, 167);
-            this.treeView1.TabIndex = 0;
+            this.MyTreeView.Location = new System.Drawing.Point(12, 37);
+            this.MyTreeView.Name = "MyTreeView";
+            this.MyTreeView.Size = new System.Drawing.Size(365, 287);
+            this.MyTreeView.TabIndex = 0;
+            this.MyTreeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.MyTreeView_NodeMouseDoubleClick);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(235, 37);
+            this.dataGridView1.Location = new System.Drawing.Point(488, 46);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(541, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(609, 150);
             this.dataGridView1.TabIndex = 1;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1267, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.treeView1);
-            this.Name = "Form1";
+            this.Controls.Add(this.MyTreeView);
+            this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -66,7 +68,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.TreeView MyTreeView;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

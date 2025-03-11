@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animal.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Models\IModels.cs" />
+    <Compile Include="Models\AnimalModel.cs" />
+    <Compile Include="Models\TreeNodeModel.cs" />
     <Compile Include="Presenters\Presenters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\IViews.cs" />
