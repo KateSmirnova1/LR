@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLib
+namespace ClassLib.Viiews
 {
-    public class Class1
+    internal interface IViews
     {
-         
     }
 }
