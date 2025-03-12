@@ -76,21 +76,54 @@ namespace Trees
 
         private void MyTreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            
-            if (e.Node.Nodes.Count ==0) 
-            {
 
-                Animal An = animalModel_.GetName(e.Node.Text);
-                if (An != null) 
+            if (e.Node.Nodes.Count == 0) // Проверяем, что это конечный узел (не группа)
+            {
+                Animal An = animalModel_.GetName(e.Node.Text); // Ищем животное по имени
+                if (An != null)
                 {
-                    object[] newRow = { An.Name, An.Weight, An.Distribution_area, An.TypeOfAnimal };
-                    dataGridView1.Rows.Add(newRow);
+                    // Проверяем, есть ли уже такое животное в таблице
+                    bool exists = false;
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if (row.Cells[0].Value?.ToString() == An.Name)
+                        {
+                            exists = true;
+                            break;
+                        }
+                    }
+
+                    if (!exists)
+                    {
+                        object[] newRow = { An.Name, An.Weight, An.Distribution_area, An.TypeOfAnimal };
+                        dataGridView1.Rows.Add(newRow); // Добавляем новую строку
+                    }
+                    else
+                    {
+                        MessageBox.Show("Это животное уже есть в таблице!");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Животное не найдено!"); // Сообщение, если животное не найдено
                 }
             }
             
         }
+        private void сохранить_Click(object sender, EventArgs e)
+        {
 
-       
+        }
+
+        private void загрузить_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

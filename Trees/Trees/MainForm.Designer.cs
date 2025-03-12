@@ -30,6 +30,10 @@
         {
             this.MyTreeView = new System.Windows.Forms.TreeView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Weight = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Distribution_area = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeOfAnimal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,12 +48,46 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(488, 46);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.Weight,
+            this.Distribution_area,
+            this.TypeOfAnimal});
+            this.dataGridView1.Location = new System.Drawing.Point(383, 37);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(609, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(773, 150);
             this.dataGridView1.TabIndex = 1;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Name
+            // 
+            this.Name.HeaderText = "Название";
+            this.Name.MinimumWidth = 6;
+            this.Name.Name = "Name";
+            this.Name.Width = 125;
+            // 
+            // Weight
+            // 
+            this.Weight.HeaderText = "Вес";
+            this.Weight.MinimumWidth = 6;
+            this.Weight.Name = "Weight";
+            this.Weight.Width = 125;
+            // 
+            // Distribution_area
+            // 
+            this.Distribution_area.HeaderText = "Зона обитания";
+            this.Distribution_area.MinimumWidth = 6;
+            this.Distribution_area.Name = "Distribution_area";
+            this.Distribution_area.Width = 200;
+            // 
+            // TypeOfAnimal
+            // 
+            this.TypeOfAnimal.HeaderText = "Вид";
+            this.TypeOfAnimal.MinimumWidth = 6;
+            this.TypeOfAnimal.Name = "TypeOfAnimal";
+            this.TypeOfAnimal.Width = 125;
             // 
             // MainForm
             // 
@@ -58,7 +96,7 @@
             this.ClientSize = new System.Drawing.Size(1267, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.MyTreeView);
-            this.Name = "MainForm";
+            //this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -70,6 +108,10 @@
 
         private System.Windows.Forms.TreeView MyTreeView;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Weight;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Distribution_area;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TypeOfAnimal;
     }
 }
 
